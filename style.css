@@ -1,0 +1,28 @@
+body{
+    color: aliceblue;
+}
+
+form{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 3px solid rgb(124, 192, 255);
+    background: skyblue;
+    flex-direction: column;
+    gap: 30px;
+    font-size: x-large;
+}
+#check{
+   background-color: rgb(213, 255, 255); 
+   color: rgb(26, 58, 86);
+   font-size: 20px;
+   border: 3px solid rgb(26, 58, 86);
+   border-radius: 10px;
+}
+img{
+    width: 50px;
+    height: 50px;
+    background-color: rgb(39, 84, 102);
+    border-radius: 50%;
+    padding: 30px;
+}

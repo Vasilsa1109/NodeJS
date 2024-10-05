@@ -1,21 +1,30 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
+
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
     <link rel="stylesheet" href="style.css">
-    <title>Document</title>
 </head>
+
 <body style="background-color: lightblue">
-    <form action="">
-        <b>Login</b>
-        <input type="text" required>
-        <b>password</b>
-        <input type="password" required>
-        <input type="submit" value="Войти" id="entering">
-        <input type="button" value="Очистить форму">
+    <h1>Login</h1>
+    <form id="loginForm" onsubmit="return validatePassword()">
+        <label for="email">Логин (email):</label>
+        <input type="email" required>
+        <br><br>
+
+        <label for="password">Пароль:</label>
+        <input type="password" class="password" required>
+        <br>
+        <div id="error-message" style="color: rgb(144, 0, 0);"></div> <br>
+
+        <button type="submit">Войти</button>
+        <button type="button" onclick="clearForm()">Очистить форму</button>
     </form>
+<script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="script.js"></script>
 </body>
-<script src="script.js"></script>
+
 </html>

@@ -13,18 +13,12 @@
     <form id="loginForm" onsubmit="return validatePassword()">
         <label for="email">Логин (email):</label>
         <input type="email" required>
-        <br><br>
-
         <label for="password">Пароль:</label>
         <input type="password" class="password" required>
-        <br>
-        <div id="error-message" style="color: rgb(144, 0, 0);"></div> <br>
-
+        <div id="error-message" style="color: rgb(144, 0, 0);"></div> 
         <button type="submit">Войти</button>
         <button type="button" onclick="clearForm()">Очистить форму</button>
     </form>
-<script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
     <script src="script.js"></script>
 </body>
-
 </html>

@@ -1,3 +1,41 @@
+// function validateEmail(email) {
+//     const emailPattern = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+//     return emailPattern.test(email);
+// }
+
+
+function validatePassword() {
+    const passwordField = document.getElementsByClassName('password')[0]; 
+    const password = passwordField.value; 
+    const passwordPattern = /^(?=.*\d)(?=.*[A-Z])[A-Za-z\d]{8,}$/; 
+    
+    const passwordRep = document.getElementById('pass2'); 
+    const passwordRepeat = passwordRep.value; 
+
+    const error = document.getElementById("error-message"); 
+    const error2 = document.getElementById("error2");
+
+    
+    if (!passwordPattern.test(password)) {
+        error.innerHTML = "Пароль должен содержать минимум 8 символов, включая 1 заглавную букву и 1 цифру.";
+        return false; 
+    }
+    if (password !== passwordRepeat) {
+        error2.innerHTML = "Пароли не совпадают"; 
+        return false; 
+    }
+
+    error.innerHTML = "";
+    error2.innerHTML = ""; 
+    alert('Данные отправлены'); 
+    return true; 
+}
+
+function clearForm() {
+    document.getElementById('loginForm').reset();
+}
+
+
 function previewImage(event) {
     const imagePreviewDiv = document.getElementById('imagePreview');
     imagePreviewDiv.innerHTML = ""; 
@@ -9,10 +47,10 @@ function previewImage(event) {
         reader.onload = function(e) {
             const img = document.createElement('img');
             img.src = e.target.result; 
-            img.style.maxWidth = '100px'; 
-            img.style.maxHeight = '100px'; 
+            img.style.maxWidth = '150px'; 
+            img.style.maxHeight = '150px'; 
             imagePreviewDiv.appendChild(img); 
-            
+        
             const label = document.querySelector('label[for="file"]');
             label.style.display = 'none'; 
         }
@@ -20,45 +58,7 @@ function previewImage(event) {
     }
 }
 
-// function validateEmail(email) {
-//     const emailPattern = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
-//     return emailPattern.test(email);
-// }
 
-
-
-function validatePassword() {
-    const passwordField = document.getElementsByClassName('password')[0];
-    const password = passwordField.value;
-    const passwordPattern = /^(?=.*\d)(?=.*[A-Z][А-Я])[A-Za-zА-Яа-я\d]{8,}$/;
-
-    const passwordRep = document.getElementById('pass2');
-    const passwordRepeat = passwordRep.value;
-
-    const error = document.getElementById("error-message");
-
-    if (!passwordPattern.test(password)) {
-        error.innerHTML = "Пароль должен содержать минимум 8 символов, включая 1 заглавную букву и 1 цифру.";
-        return false;
-    }
-
-    if (password !== passwordRepeat) {
-        error.innerHTML = "Пароли не совпадают";
-        return false;
-    }
-    error.innerHTML = "";
-    validateEmail(email);
-    alert('Данные отправлены');
-    return true;
-}
-
-
-
-
-function clearForm() {
-    document.getElementById('loginForm').reset();
-    document.getElementById('error-message').innerHTML = "";
-}
 
 
 

@@ -5,23 +5,38 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
-    <title>Document</title>
+    <title>Registration</title>
 </head>
 <body style="background-color: lightblue">
-    <form action="" id="form">
-        <label for="file"><img src="avatar.png" alt=""></label>
-        <b>name</b>
+    <form action="" id="form" onsubmit="return validatePassword()">
+        <label for="file">
+            <img src="/" alt="Upload Image" >
+        </label>
+        <div id="imagePreview"></div>
+        <input type="file" id="file" name="file" accept="image/*" required style="display: none;" onchange="previewImage(event)">
+            
+        <b>Name</b>
         <input type="text" required>
-        <b>surname</b>
+        <br><br>
+        
+        <b>Surname</b>
         <input type="text" required>
-        <b>date of birth</b>
+        <br><br>
+        
+        <b>Date of Birth</b>
         <input type="date" required>
-        <b>password</b>
-        <input type="password" required id="pass1">
-         <b>rewrite password</b>
+        <br><br>
+        
+        <b>Password</b>
+        <div id="error-message" style="color: rgb(144, 0, 0);"></div> 
+        <input type="password" required class="password">
+        
+        <b>Rewrite Password</b>
+        <div id="error2" style="color: rgb(144, 0, 0);"></div> 
         <input type="password" required id="pass2">
+        
         <input type="submit" value="Отправить" id="check">
     </form>
+    <script src="script.js"></script>
 </body>
-<script src="script.js"></script>
 </html>

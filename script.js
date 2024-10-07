@@ -75,7 +75,7 @@ function previewImage(event) {
 
 
 
-
+//Создание сервера
 // const http = require('http');
 // const hostname = '127.0.0.1';
 // const port = 3000;
@@ -92,8 +92,7 @@ function previewImage(event) {
 // AXIOS
 
 // function getAxios() {
-//     const url = 'file:///C:/BackEnd/Dz_proj/NodeJS/nodejs/login.html';
-
+//     const url = '/Dz_proj/NodeJS/nodejs/login.html';
 //     axios.get(url)
 //         .then(response => {
 //             console.log('GET:', response.data);
@@ -106,7 +105,7 @@ function previewImage(event) {
 // getAxios(); 
 
 // function postAxios() {
-//     const url = 'file:///C:/BackEnd/Dz_proj/NodeJS/nodejs/login.html';
+//     const url = '/Dz_proj/NodeJS/nodejs/login.html';
 
 //     axios.post(url)
 //         .then(response => {
@@ -122,7 +121,7 @@ function previewImage(event) {
 
 // //JS
 // function getData() {
-//     const url = 'file:///C:/BackEnd/Dz_proj/NodeJS/nodejs/login.html'; 
+//     const url = '/Dz_proj/NodeJS/nodejs/login.html'; 
 //     fetch(url)
 //         .then(response => {
 //             if (!response.ok) {
@@ -134,14 +133,14 @@ function previewImage(event) {
 //             console.log('GET request data:', data);
 //         })
 //         .catch(error => {
-//             console.error('There has been a problem with your fetch operation:', error);
+//             console.error('Error:', error);
 //         });
 // }
 
 // getData(); 
 
 // function postData() {
-//     const url = 'file:///C:/BackEnd/Dz_proj/NodeJS/nodejs/login.html'; 
+//     const url = '/Dz_proj/NodeJS/nodejs/login.html'; 
 //     const data = {
 //         title: 'foo',
 //         body: 'bar',

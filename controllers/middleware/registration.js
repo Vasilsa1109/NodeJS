@@ -1,5 +1,4 @@
 //Post_axios
-
 axios.post('/registration', {
   name: '',
   surname: '',

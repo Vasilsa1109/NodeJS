@@ -20,3 +20,22 @@ async function main(){
   }) 
 }
 main();
+
+
+//подключение handlebars 
+// const express = require('express');
+// const app = express();
+
+const handlebars = require('express-handlebars');
+
+app.engine('handlebars', handlebars.engine({defaultLayout: 'main'})
+);
+
+app.set('views', './views');
+app.set('view engine', 'handlebars');
+
+app.get('/', (req, res) => {
+  res.render('home', {
+    title: 'Handlebars',
+  });
+})
